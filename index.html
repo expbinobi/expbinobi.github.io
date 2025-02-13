@@ -156,13 +156,13 @@
       // Create and insert user ID element
       const userIdElement = document.createElement('h3');
       userIdElement.className = 'user-id';
-      userIdElement.textContent = `All'interno di ogni questionario dovrai inserire il seguente ID: ${generateUserId()}`;
+      userIdElement.textContent = `Ciao! Per partecipare al test, ti chiederemo di compilare alcuni brevi questionari. All'interno di ogni questionario dovrai inserire il seguente ID: ${generateUserId()}`;
       document.body.insertBefore(userIdElement, document.getElementById('groupsContainer'));
 
 
       const descriptionFirst = document.createElement('h3');
       descriptionFirst.className = 'user-id';
-      descriptionFirst.textContent = `Ti chiediamo di cliccare sul seguente link per compilare il primo questionario:`;
+      descriptionFirst.textContent = `Ti chiediamo di cliccare sul seguente link per leggere le istruzioni e compilare il primo questionario:`;
       document.body.insertBefore(descriptionFirst,document.getElementById('groupsContainer'));
 
       // Create and insert single link container
