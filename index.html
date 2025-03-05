@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <base target="_blank">
     <style>
       :root {
@@ -19,12 +20,13 @@
 
       body {
         font-family: system-ui, -apple-system, sans-serif;
-        line-height: 1.4;
+        line-height: 1.5;
         color: var(--text);
         background: var(--background);
         padding: 1rem;
         max-width: 800px;
         margin: 0 auto;
+        font-size: 18px; /* Increased base font size from 16px */
       }
 
       .group-container {
@@ -36,7 +38,7 @@
       }
 
       .group-title {
-        font-size: 1.1rem;
+        font-size: 1.3rem; /* Increased from 1.1rem */
         font-weight: 600;
         color: var(--primary);
         margin-bottom: 0.75rem;
@@ -49,16 +51,16 @@
         flex-direction: column;
         gap: 0.25rem;
       }
-   
+
       .link-item {
         display: block;
-        padding: 0.5rem 0.75rem;
+        padding: 0.75rem 1rem; /* Increased padding */
         background: white;
         text-decoration: none;
         color: var(--text);
         border-radius: 4px;
         border: 1px solid var(--border);
-        font-size: 0.9rem;
+        font-size: 1.05rem; /* Increased from 0.9rem */
         transition: all 0.2s ease;
       }
 
@@ -66,51 +68,79 @@
         background: var(--secondary);
         border-color: var(--primary);
       }
+
       .user-id {
         text-align: center;
         padding: 1rem;
         margin-bottom: 1rem;
         font-weight: 400;
         color: var(--primary);
+        font-size: 1.1rem; /* Added explicit font size */
       }
+
       .single-link-container {
-      background: var(--secondary);
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid var(--border);
+        background: var(--secondary);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border);
       }
 
       .single-link {
-          display: block;
-          padding: 0.75rem 1rem;
-          background: white;
-          text-decoration: none;
-          color: var(--text);
-          border-radius: 4px;
-          border: 1px solid var(--border);
-          font-size: 0.9rem;
-          transition: all 0.2s ease;
-          text-align: left;
+        display: block;
+        padding: 0.75rem 1rem;
+        background: white;
+        text-decoration: none;
+        color: var(--text);
+        border-radius: 4px;
+        border: 1px solid var(--border);
+        font-size: 1.05rem; /* Increased from 0.9rem */
+        transition: all 0.2s ease;
+        text-align: left;
       }
 
       .single-link:hover {
-          background: var(--secondary);
-          border-color: var(--primary);
-          color: var(--primary);
+        background: var(--secondary);
+        border-color: var(--primary);
+        color: var(--primary);
       }
 
       .link-item.clicked {
-    background: #e6ffe6; /* Light green background da*/
-    border-color: #4CAF50; /* Green border */
-    color: #2a2a2a;
-    }
-
-    .single-link.clicked {
-        background: #e6ffe6; /* Light green background h*/
-        border-color: #4CAF50; /* Green border */
+        background: #e6ffe6;
+        border-color: #4CAF50;
         color: #2a2a2a;
-    }
+      }
+
+      .single-link.clicked {
+        background: #e6ffe6;
+        border-color: #4CAF50;
+        color: #2a2a2a;
+      }
+
+      /* Add this meta tag to your HTML head for proper mobile rendering */
+      /* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+      /* Mobile-specific adjustments */
+      @media (max-width: 480px) {
+        body {
+          font-size: 17px; /* Slightly smaller than desktop but still larger than original */
+          padding: 0.75rem;
+        }
+        
+        .group-title {
+          font-size: 1.2rem;
+        }
+        
+        .user-id {
+          font-size: 1rem;
+        }
+        
+        .link-item, .single-link {
+          font-size: 1rem;
+          padding: 0.75rem;
+        }
+      }
+
 
     </style>
   </head>
